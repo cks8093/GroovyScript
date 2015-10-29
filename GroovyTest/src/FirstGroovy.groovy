@@ -1,27 +1,27 @@
-//Å¬·¡½º »ı¼º
+//í´ë˜ìŠ¤ ìƒì„±
 class Employee {
-	def salary //def´Â var¿Í °°Àº ÀÇ¹Ì
+	def salary //defëŠ” varì™€ ê°™ì€ ì˜ë¯¸
 	double calculateRaise(c) {
 		return c(salary) 
-		/*´å³İ°°Àº °æ¿ì´Â µ¨¸®°ÔÀÌÆ®(Action[¸®ÅÏ°ªX], Func[¸®ÅÏ°ªO])°ú °°ÀÌ Å¸ÀÔÀ» ¹İµå½Ã ÀÖ¾î¾ß µÇ´Âµ¥
-		 * Groovy´Â ÀÌ¸§¸¸ ³Ñ±â¸é µÊ
+		/*ë‹·ë„·ê°™ì€ ê²½ìš°ëŠ” ë¸ë¦¬ê²Œì´íŠ¸(Action[ë¦¬í„´ê°’X], Func[ë¦¬í„´ê°’O])ê³¼ ê°™ì´ íƒ€ì…ì„ ë°˜ë“œì‹œ ìˆì–´ì•¼ ë˜ëŠ”ë°
+		 * GroovyëŠ” ì´ë¦„ë§Œ ë„˜ê¸°ë©´ ë¨
 		 * */
 	}
 }
  
-//Å¬·¡½º »ı¼º ºÎºĞ, ´å³İ°°Àº °æ¿ì´Â new Employee(){salary=1000}
+//í´ë˜ìŠ¤ ìƒì„± ë¶€ë¶„, ë‹·ë„·ê°™ì€ ê²½ìš°ëŠ” new Employee(){salary=1000}
 Employee employee1 = new Employee(salary:1000)
-//ÆÄ¶ó¹ÌÅÍ·Î ³Ñ±æ µ¨¸®ÄÉÀÌÆ® »ı¼º, ¾Æ·¡ÄÚµå´Â ´å³İÀÌ¶û Â÷ÀÌ ¾øÀ½
+//íŒŒë¼ë¯¸í„°ë¡œ ë„˜ê¸¸ ë¸ë¦¬ì¼€ì´íŠ¸ ìƒì„±, ì•„ë˜ì½”ë“œëŠ” ë‹·ë„·ì´ë‘ ì°¨ì´ ì—†ìŒ
 def raise1 = {z -> (z * 1.5)}
-println employee1.calculateRaise(raise1) //»ı¼ºµÈ Å¬·¡½º¿¡ µ¨¸®°ÔÀÌÆ® ³Ñ±è
+println employee1.calculateRaise(raise1) //ìƒì„±ëœ í´ë˜ìŠ¤ì— ë¸ë¦¬ê²Œì´íŠ¸ ë„˜ê¹€
  
 Employee employee2 = new Employee()
-employee2.salary = "´ëÇÑ"; //¿ä·¸°Ôµµ ÇØµµ µÊ, ÀÌ¹ø¿¡ ÇÑ¹ø ¹®ÀÚ¿­·Î º¯È¯
+employee2.salary = "ëŒ€í•œ"; //ìš”ë ‡ê²Œë„ í•´ë„ ë¨, ì´ë²ˆì— í•œë²ˆ ë¬¸ìì—´ë¡œ ë³€í™˜
 
-def raise2 = {z -> (z + "¹Î±¹")}
+def raise2 = {z -> (z + "ë¯¼êµ­")}
 //println employee2.calculateRaise(raise2)
 
-//´å³İÀÇ var¿Í ¸¶Âù°¡Áö·Î °ªÀ» ÀÔ·Â½Ã Å¸ÀÔÀÌ °áÁ¤µÊ, ÇöÀçÅ¸ÀÔÀº java.util.MapÀ¸·Î º¯È¯µÊ
+//ë‹·ë„·ì˜ varì™€ ë§ˆì°¬ê°€ì§€ë¡œ ê°’ì„ ì…ë ¥ì‹œ íƒ€ì…ì´ ê²°ì •ë¨, í˜„ì¬íƒ€ì…ì€ java.util.Mapìœ¼ë¡œ ë³€í™˜ë¨
 def map = ['name':'Bashar', 'age':26, skills:['Java', 'Groovy'], 'author':true]
 assert map.size() == 4
 
@@ -29,3 +29,4 @@ map += ['city':'Tucson']
 assert map == ['name':'Bashar', 'age':26, skills:['Java', 'Groovy'], 'author':true, 'city':'Tucson']
  
 (1..5).each{println it}
+
